@@ -31,7 +31,7 @@ const calculaPreco = (entrants) => {
 };
 
 function calculateEntry(entrants) {
-  if (entrants === undefined || Object.keys(entrants).length === 0) {
+  if (!entrants || Object.keys(entrants).length === 0) {
     return 0;
   }
   if (Object.keys(entrants).length >= 1) {
@@ -40,7 +40,7 @@ function calculateEntry(entrants) {
 }
 /*
   Consulta:
-    Raphael Martins fez um thread no Slack sobre expressão lógica para objetos.
+    Raphael Martins fez uma thread no Slack sobre expressão lógica para objetos.
 */
 
 module.exports = { calculateEntry, countEntrants };

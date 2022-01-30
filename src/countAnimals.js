@@ -20,7 +20,7 @@ const req3 = (animal) => {
 };
 
 function countAnimals(animal) {
-  if (animal === undefined) {
+  if (!animal) {
     return animalsInfo();
   }
   if (animal.sex) {
